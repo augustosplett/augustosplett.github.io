@@ -1,0 +1,70 @@
+* {
+    font-family: system-ui, sans-serif;
+    margin: auto;
+    padding: 0;
+}
+
+body{
+    color: #222831;
+    background-color: #dddddd;
+}
+
+.cabecalho{
+    display: flex;
+    align-content: space-around;
+
+}
+
+.menu{
+    padding: 10px;
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+    border-radius: 3px;
+    text-align: center;
+
+}
+
+.menu li{
+    list-style: none;
+    padding: 5px;
+}
+
+.rodape{
+    background-color: #30475e;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+
+}
+
+.fa {
+    padding: 15px;
+    width: 10px;
+    border-radius: 3px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+.fa:hover {
+    color: white;
+    box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+
+}
+.fa-linkedin {
+    background: #3B5998;
+}
+.fa-twitter {
+    background: #55ACEE;
+}
+.fa-github {
+    background: black;
+}
+.fa-instagram {
+    background: coral;
+}
+
