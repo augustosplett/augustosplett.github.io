@@ -3,35 +3,28 @@
     margin: auto;
     padding: 0;
 }
-
 body{
-    color: #222831;
+    color: black;
     background-color: #dddddd;
 }
-
 .cabecalho{
     display: flex;
     align-content: center;
-
 }
-
 .menu{
     padding: 10px;
     display: flex;
 }
-
 a{
     text-decoration: none;
     border-radius: 3px;
     text-align: center;
 
 }
-
 .menu li{
     list-style: none;
     padding: 5px;
 }
-
 .rodape{
     background-color: #394989;
     position: fixed;
@@ -39,9 +32,7 @@ a{
     left: 0;
     width: 100%;
     padding: 10px;
-
 }
-
 .fa {
     padding: 15px;
     width: 10px;
@@ -53,7 +44,6 @@ a{
 .fa:hover {
     color: white;
     box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
-
 }
 .fa-linkedin {
     background: #3B5998;
@@ -67,41 +57,41 @@ a{
 .fa-instagram {
     background: coral;
 }
-
 .resumo-perfil{
     display: flex;
     flex-wrap: wrap;
+    
     background-color: azure;
     width: 70%;
     border-radius: 5px;
     box-shadow: 0 5px 15px gray;
-
+    margin-top: 3%;
 }
-
 .imagem-perfil{
     max-width: 30%;
     min-width: 360px;
-    padding: 5%;
+    padding: 2%;
+    height: 100%;
 
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
     filter: gray; /* IE */
-
-    -moz-transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
-}
-
-.imagem-perfil:hover {
-  -moz-transform: scale(1.2);
-  -webkit-transform: scale(1.2);
-  transform: scale(1.15);
+  
 }
 .container-ola{
     display: flex;
     flex-direction: column;
     align-content: flex-start;
     max-width: 60%;
+
+}
+.botoes{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    width: 80%;
+    margin-top: 2%;
+
 }
 .ola{
     font-size:60px;
@@ -118,9 +108,16 @@ a{
 h1{
     text-align: justify;
     margin-left: 3%;
-
 }
 img{
     border-radius: 100%;
-    max-width: 100%;
+}
+
+.btn{
+    color:#394989;
+    padding: 1.5%;   
+}
+.activated, .btn:hover{
+    color: white;
+    background-color:#394989;
 }
