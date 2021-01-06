@@ -11,7 +11,7 @@ body{
 
 .cabecalho{
     display: flex;
-    align-content: space-around;
+    align-content: center;
 
 }
 
@@ -33,7 +33,7 @@ a{
 }
 
 .rodape{
-    background-color: #30475e;
+    background-color: #394989;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -68,3 +68,59 @@ a{
     background: coral;
 }
 
+.resumo-perfil{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: azure;
+    width: 70%;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px gray;
+
+}
+
+.imagem-perfil{
+    max-width: 30%;
+    min-width: 360px;
+    padding: 5%;
+
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray; /* IE */
+
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.imagem-perfil:hover {
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.15);
+}
+.container-ola{
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    max-width: 60%;
+}
+.ola{
+    font-size:60px;
+    font-weight: bolder;
+    color: #394989;
+    margin-left: 3%;
+}
+.ola-texto{
+    max-width: 75%;
+    margin-top: 1%;
+    text-align: justify;
+    margin-left: 3%;
+}
+h1{
+    text-align: justify;
+    margin-left: 3%;
+
+}
+img{
+    border-radius: 100%;
+    max-width: 100%;
+}
