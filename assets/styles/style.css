@@ -7,24 +7,38 @@ body{
     color: black;
     background-color: #dddddd;
 }
-.cabecalho{
-    display: flex;
-    align-content: center;
+h1, h4{
+    text-align: left;
+    margin-left: 0;
+    width: 100%;
+    
 }
-.menu{
-    padding: 10px;
-    display: flex;
+img{
+    border-radius: 100%;
+    width: 90%;
+    height: auto;
 }
-a{
-    text-decoration: none;
-    border-radius: 3px;
-    text-align: center;
 
+.botoes{
+    text-align: center;
+    width: 80%;
+    margin-top: 2%;
 }
-.menu li{
-    list-style: none;
-    padding: 5px;
+
+.resumo-perfil{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+
+    background-color: azure;
+    width: 95%;
+    max-width: 1500px;
+
+    border-radius: 5px;
+    box-shadow: 0 5px 15px gray;
+    margin-top: 3%;
 }
+
 .rodape{
     background-color: #394989;
     position: fixed;
@@ -33,6 +47,62 @@ a{
     width: 100%;
     padding: 10px;
 }
+
+a{
+    text-decoration: none;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.imagem-perfil{
+    text-align: center;
+    max-width: 30%;
+    min-width: 290px;
+    padding: 2%;
+    height: 100%;
+
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray; /* IE */
+  
+}
+.container-ola{
+    
+    max-width: 60%;
+    min-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    
+}
+
+.ola{
+    font-size:60px;
+    margin-left: 0;
+    font-weight: bolder;
+    color: #394989;
+    
+}
+
+.ola-texto{
+    
+    max-width: 75%;
+    margin-top: 1%;
+
+}
+
+.btn{
+    color:#394989;
+    padding: 1%;   
+}
+.activated, .btn:hover{
+    color: white;
+    background-color:#394989;
+}
+.justificar{
+    text-align: justify;
+}
+
 .fa {
     padding: 15px;
     width: 10px;
@@ -56,68 +126,4 @@ a{
 }
 .fa-instagram {
     background: coral;
-}
-.resumo-perfil{
-    display: flex;
-    flex-wrap: wrap;
-    
-    background-color: azure;
-    width: 70%;
-    border-radius: 5px;
-    box-shadow: 0 5px 15px gray;
-    margin-top: 3%;
-}
-.imagem-perfil{
-    max-width: 30%;
-    min-width: 360px;
-    padding: 2%;
-    height: 100%;
-
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-    filter: gray; /* IE */
-  
-}
-.container-ola{
-    display: flex;
-    flex-direction: column;
-    align-content: flex-start;
-    max-width: 60%;
-
-}
-.botoes{
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    width: 80%;
-    margin-top: 2%;
-
-}
-.ola{
-    font-size:60px;
-    font-weight: bolder;
-    color: #394989;
-    margin-left: 3%;
-}
-.ola-texto{
-    max-width: 75%;
-    margin-top: 1%;
-    text-align: justify;
-    margin-left: 3%;
-}
-h1{
-    text-align: justify;
-    margin-left: 3%;
-}
-img{
-    border-radius: 100%;
-}
-
-.btn{
-    color:#394989;
-    padding: 1.5%;   
-}
-.activated, .btn:hover{
-    color: white;
-    background-color:#394989;
 }
