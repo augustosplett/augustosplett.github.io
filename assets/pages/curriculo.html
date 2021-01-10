@@ -5,18 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../../../assets/styles/style.css">
+    <link rel="stylesheet" href="../../assets/styles/slideshow.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <div class="resumo-perfil">
-        <div class="botoes">  
-            <a href="../../../index.html" class="btn ">Home</a>
-            <a href="../../../assets/pages/curriculo.html" class="btn activated">Currículo</a>
-            <a href="../../../assets/pages/projetos.html" class="btn">Projetos</a>
-            <a href="../../../assets/pages/contato.html" class="btn">Contato</a>
+    <div class="botoes">  
+        <a href="../../../index.html" class="btn ">Home</a>
+        <a href="../../../assets/pages/curriculo.html" class="btn activated">Currículo</a>
+        <a href="../../../assets/pages/projetos.html" class="btn">Projetos</a>
+        <a href="../../../assets/pages/contato.html" class="btn">Contato</a>
+    </div>
+
+    <div class="container-padrao">
+        <div class="experiencias-profissionais">
+            <h1 class="color-text">Experiências Profissionais</h1>
+            <div class="slide-container">
+                <div class="slide">
+                    <h4>Product Owner @Sicredi</h4>
+                    <h5>JUN/2019 - Atual</h5>
+                    <p>Construção, aprimoramento e manutenção do roadmap do produto e backlog do time, incluindo novas
+                        funcionalidades, bugs e evoluções do produto.</p>
+                    <p>Definição do objetivo da sprint priorizando as histórias/funcionalidades com o maior retorno ou
+                        impacto para o produto.</p>
+                    <p>Fazer interface entre o time de desenvolvimento e os demais stakeholders, criando as histórias e
+                        definindo os critérios de aceite.</p>
+                    <p>Atualmente atuando com foco em produto de crédito rotativo (cheque especial) e com experiência em
+                        produtos de crédito parcelados (crédito veículos). Atuando em todas as etapas do ciclo de vida
+                        do produto.</p>
+                </div>
+                <div class="slide">
+                    <h4>teste</h4>
+                    <h5>JUN/2019 - Atual</h5>
+                    <p>Construção, aprimoramento e manutenção do roadmap do produto e backlog do time, incluindo novas
+                        funcionalidades, bugs e evoluções do produto.</p>
+                    <p>Definição do objetivo da sprint priorizando as histórias/funcionalidades com o maior retorno ou
+                        impacto para o produto.</p>
+                    <p>Fazer interface entre o time de desenvolvimento e os demais stakeholders, criando as histórias e
+                        definindo os critérios de aceite.</p>
+                    <p>Atualmente atuando com foco em produto de crédito rotativo (cheque especial) e com experiência em
+                        produtos de crédito parcelados (crédito veículos). Atuando em todas as etapas do ciclo de vida
+                        do produto.</p>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+
         </div>
-
-
+        <div class="dot-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+        <div class="educacao">
+            <h1 class="color-text">Educação</h1>
+        </div>
     </div>  
 
     <footer class="rodape">
@@ -24,6 +66,7 @@
         <a href="https://github.com/augustosplett" target="_blank" class="fa fa-github"></a>
         <a href="https://www.instagram.com/augustosplett/" target="_blank" class="fa fa-instagram"></a>
         <a href="https://twitter.com/AugustoSplett" target="_blank" class="fa fa-twitter"></a>
-    </footer>    
+    </footer>  
+    <script src="../../assets/scripts/slideShow.js"></script>
 </body>
 </html>

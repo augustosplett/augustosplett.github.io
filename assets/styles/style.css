@@ -25,7 +25,7 @@ img{
     margin-top: 2%;
 }
 
-.resumo-perfil{
+.container-padrao{
     display: flex;
     flex-wrap: wrap;
     align-content: center;
@@ -37,6 +37,7 @@ img{
     border-radius: 5px;
     box-shadow: 0 5px 15px gray;
     margin-top: 3%;
+    margin-bottom: 80px;
 }
 
 .rodape{
@@ -72,7 +73,7 @@ a{
     min-width: 300px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 100px;
+    
     
 }
 
@@ -90,7 +91,9 @@ a{
     margin-top: 1%;
 
 }
-
+.color-text{
+    color:#394989;
+}
 .btn{
     color:#394989;
     padding: 1%;   
@@ -102,7 +105,14 @@ a{
 .justificar{
     text-align: justify;
 }
-
+.experiencias-profissionais{
+    width: 100%;
+    margin: 3%;
+}
+.educacao{
+    width: 100%;
+    margin: 3%;
+}
 .fa {
     padding: 15px;
     width: 10px;
