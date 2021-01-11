@@ -137,3 +137,18 @@ a{
 .fa-instagram {
     background: coral;
 }
+
+.contatos{
+    display: flex;
+    flex-direction: column;
+
+    
+}
+.contato{
+    padding: 15px;
+
+    border-radius: 3px;
+    color: #394989;
+   
+    
+}
