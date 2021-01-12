@@ -23,6 +23,7 @@ img{
     text-align: center;
     width: 80%;
     margin-top: 2%;
+   
 }
 
 .container-padrao{
@@ -96,7 +97,8 @@ a{
 }
 .btn{
     color:#394989;
-    padding: 1%;   
+    padding: 1%; 
+  
 }
 .activated, .btn:hover{
     color: white;
@@ -139,16 +141,21 @@ a{
 }
 
 .contatos{
-    display: flex;
-    flex-direction: column;
+
 
     
 }
 .contato{
-    padding: 15px;
-
+    width: 30px;
+    height: 30px;
+    background-color:#394989 ;
     border-radius: 3px;
-    color: #394989;
+    color: white;
+    text-align: center;
+    text
    
-    
+}
+
+.align-left{
+    text-align: left;
 }
