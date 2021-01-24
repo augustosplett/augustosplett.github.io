@@ -139,12 +139,6 @@ a{
 .fa-instagram {
     background: coral;
 }
-
-.contatos{
-
-
-    
-}
 .contato{
     width: 30px;
     height: 30px;
@@ -152,10 +146,8 @@ a{
     border-radius: 3px;
     color: white;
     text-align: center;
-    text
-   
+    text  
 }
-
 .align-left{
     text-align: left;
 }
