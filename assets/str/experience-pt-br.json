@@ -1,0 +1,29 @@
+{
+    "Education":[{"Institution":"FTEC",
+                    "Course":"Tecnólogo: Análise e Desenvolvimento de Sistemas",
+                    "Status":"Cursando",
+                    "Period":"2020 - Atual"},
+                {"Institution":"Uniritter",
+                    "Course":"Pós-Graduação: User Experience",
+                    "Status":"Concluído",
+                    "Period":"2017 - 2019"},
+                {"Institution":"FAPA",
+                    "Course":"Graduação: Bacharel em Adminstração",
+                    "Status":"Concluído",
+                    "Period":"2009 - 2015"}
+
+    ],
+    "Jobs":[{"Company":"Localiza",
+                "Position":"Product Owner",
+                "Period": "Atual",
+                "Description":"Participar de mil reunioes"}, 
+            {"Company":"Sicredi",
+                "Position":"Product Owner",
+                "Period": "ano passado",
+                "Description":"Participar de agendas do IOF"},
+            {"Company":"Itau",
+                "Position":"Caixa",
+                "Period": "faz tempo",
+                "Description":"sofrer para atender a fila"}
+            ]
+}
