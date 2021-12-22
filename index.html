@@ -3,38 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is my personal landing page. Here you can discover a little bit more about me.">
     <title>Tinho's Home page</title>
     <link rel="stylesheet" href="assets/styles/style.css">
     <script src="https://kit.fontawesome.com/6608396af3.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <header>
+        <nav class="botoes">  
+            <a href="index.html" class="btn activated">Home</a>
+            <a href="assets/pages/curriculo.html" class="btn">Sobre Mim</a>
+            <a href="assets/pages/projetos.html" class="btn">Projetos</a>
+            <a href="assets/pages/contato.html" class="btn">Contato</a>
+        </nav>        
+    </header>
 
-    <div class="botoes">  
-        <a href="index.html" class="btn activated">Home</a>
-        <a href="assets/pages/curriculo.html" class="btn">Sobre Mim</a>
-        <a href="assets/pages/projetos.html" class="btn">Projetos</a>
-        <a href="assets/pages/contato.html" class="btn">Contato</a>
-    </div>
+    <main>
+        <section class="container-padrao">
+            <img  class="imagem-perfil" src="assets/img/ProfilePhoto.jpeg"  alt="ProfilePhoto">
+            <div class="container-ola">
+                <span class="ola">Olá,</span>
+                <h1 class="ola-texto">me chamo Augusto, tudo bem?</h1>
+                <h4 class="ola-texto justificar">Esta página fala um pouco sobre mim, minhas experiências, minhas áreas de interesse, meus hobbies a mais 
+                    algumas coisas, sinta se a vontade para me conhecer um pouco melhor, seja explorando esta página, me contatando 
+                    por alguma das minhas redes sociais ou mesmo me mandando uma mensagem...
+                </h4> 
+            </div>
+        </section>
+        <section class="layout-padrao-desktop">
+            <h2 class="color-text">Educação</h2>
+            <br>
+            <h4>Tecnólogo: Análise e Desenvolvimento de Sistemas</h4>
+            <p>FTEC - Cursando</p>
+            <br>
+            <h4>Pós-Graduação: User Experience</h4>
+            <p>UniRitter - Concluído - 2017 - 2019</p>
+            <br>
+            <h4>Graduação: Bacharel em Adminstração</h4>
+            <p>FAPA - Concluído - 2006 - 2015</p>
+        </section>
 
-    <div class="container-padrao">
-       
-        <div class="imagem-perfil">
-            <img src="assets/img/ProfilePhoto.jpeg"  alt="ProfilePhoto">
-        </div>
-        
-        <div class="container-ola">
-            <span class="ola">Olá,</span>
-   
-            <h1 class="ola-texto">me chamo Augusto, tudo bem?</h1>
-            <h4 class="ola-texto justificar">Esta página fala um pouco sobre mim, minhas experiências, minhas áreas de interesse, meus hobbies a mais 
-                algumas coisas, sinta se a vontade para me conhecer um pouco melhor, seja explorando esta página, me contatando 
-                por alguma das minhas redes sociais ou mesmo me mandando uma mensagem...
-            </h4> 
-            
-        </div>
-
-    </div>  
-
+        <section class="layout-padrao-desktop">
+            <h2 class="color-text">Contatos</h2>
+            <i class="fas fa-at contato"> </i>augusto.splett@gmail.com <br>
+            <i class="fas fa-mobile-alt contato"></i>(51) 9 9101 8587 <br>
+            <i class="fab fa-linkedin-in contato"> </i>augusto-msplett <br>
+            <i class="fab fa-github contato"></i>augustosplett
+        </section> 
+    </main>
+ 
     <footer class="rodape">
         <a href="https://www.linkedin.com/in/augusto-msplett/" target="_blank" class="fa fa-linkedin"></a>
         <a href="https://github.com/augustosplett" target="_blank" class="fa fa-github"></a>
