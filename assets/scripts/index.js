@@ -1,4 +1,6 @@
 function handleData(){
+    //const lang = navigator.language
+    //console.log(lang)
     fetch("./assets/str/experience-pt-br.json")
     .then(e => e.json())
     .then(retorno => {
@@ -8,6 +10,7 @@ function handleData(){
             handleEducation(element.Institution, element.Course,element.Status, element.Period))
         retorno.About.forEach(element =>
             handleAbout(element.Title, element.Description))
+        handleContacts(retorno.Phone)
     })
 }
 
@@ -34,4 +37,16 @@ function handleExperience(company, position, period, description){
                         <h4>${period}</h4>
                         <p>${description}</p>`;
     experiencies.appendChild(container);
+}
+
+function handleContacts(phone){
+    const contacts = document.querySelector("#contato"); 
+    const container = document.createElement('div');
+    container.innerHTML = `<a href="tel:+55-51-99101-8587">${phone}</a>
+                        <a href="mailto:augusto.splett@gmail.com">e-mail:augusto.splett@gmail.com</a>
+                        <a href="https://www.linkedin.com/in/augusto-msplett/" target="_blank" >Linkedin</a>
+                        <a href="https://github.com/augustosplett" target="_blank">Github</a>
+                        <a href="https://www.instagram.com/augustosplett/" target="_blank">Instagram</a>
+                        <a href="https://twitter.com/AugustoSplett" target="_blank">Twitter</a>`
+    contacts.appendChild(container);
 }
