@@ -4,6 +4,8 @@ function handleData(){
     fetch("./assets/str/experience-pt-br.json")
     .then(e => e.json())
     .then(retorno => {
+        retorno.Titles.forEach(element =>
+            handleTitles(element.About, element.Experiences, element.Education, element.Contact))
         retorno.Jobs.forEach(element => 
             handleExperience(element.Company,element.Position,element.Period,element.Description))
         retorno.Education.forEach(element => 
@@ -49,4 +51,20 @@ function handleContacts(phone){
                         <a href="https://www.instagram.com/augustosplett/" target="_blank">Instagram</a>
                         <a href="https://twitter.com/AugustoSplett" target="_blank">Twitter</a>`
     contacts.appendChild(container);
+}
+
+function handleTitles(about, experiences, education, contact){
+    const navbar = document.querySelector("#navbar"); 
+    navbar.innerHTML = `<a href="#sobre" >${about}</a>
+        <a href="#experiencias-profissionais">${experiences}</a>
+        <a href="#educacao">${education}</a>
+        <a href="#contato">${contact}</a>`
+    const contacts2 = document.querySelector("#contato"); 
+    contacts2.innerHTML = `<h2>${contact}</h2>`
+    const experiencies2 = document.querySelector("#experiencias-profissionais"); 
+    experiencies2.innerHTML = `<h2>${experiences}</h2>`
+    const education2 = document.querySelector("#educacao");
+    education2.innerHTML = `<h2>${education}</h2>`
+    const about2 = document.querySelector("#sobre");
+    about2.innerHTML = `<h2>${about}</h2>`
 }
