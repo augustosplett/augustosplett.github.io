@@ -4,6 +4,25 @@
     padding: 0;
 }
 body{
-    color: black;
+    color: #041C32;
     background-color: #dddddd;
+}
+
+#navbar{
+    background-color: #041C32;
+    padding: 2vh;
+    
+}
+#navbar a{
+    color: #ECB365;
+    text-decoration: none;
+    padding: .3vh;
+
+}
+#navbar a:hover{
+    color: white;
+    text-decoration: none;
+    margin: .3vh;
+    font-weight: 900;
+
 }
