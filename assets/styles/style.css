@@ -8,6 +8,15 @@ body{
     background-color: #dddddd;
 }
 
+main{
+    margin: 2vh;
+}
+section,h1,h2,h3{
+    padding-top: 1vh;
+    
+}
+
+
 #navbar{
     background-color: #041C32;
     padding: 2vh;
@@ -25,4 +34,8 @@ body{
     margin: .3vh;
     font-weight: 900;
 
+}
+#contato div{
+    display: flex;
+    flex-direction: column;
 }
