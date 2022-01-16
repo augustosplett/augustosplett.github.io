@@ -54,11 +54,11 @@ function handleContacts(phone){
 }
 
 function handleTitles(about, experiences, education, contact){
-    const navbar = document.querySelector("#navbar"); 
-    navbar.innerHTML = `<a href="#sobre" >${about}</a>
-        <a href="#experiencias-profissionais">${experiences}</a>
-        <a href="#educacao">${education}</a>
-        <a href="#contato">${contact}</a>`
+    const navbar = document.querySelector("#menu"); 
+    navbar.innerHTML = `<a href="#sobre"><li>${about}</li></a>
+        <a href="#experiencias-profissionais"><li>${experiences}</li></a>
+        <a href="#educacao"><li>${education}</li></a>
+        <a href="#contato"><li>${contact}</li></a>`
     const contacts2 = document.querySelector("#contato"); 
     contacts2.innerHTML = `<h2>${contact}</h2>`
     const experiencies2 = document.querySelector("#experiencias-profissionais"); 
