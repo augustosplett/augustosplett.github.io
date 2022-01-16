@@ -19,7 +19,7 @@ function handleData(){
 function handleAbout(title, description){
     const about = document.querySelector("#sobre");
     const container = document.createElement('div');
-    container.innerHTML = `<span>${title}</span>
+    container.innerHTML = `<p>${title}</p>
                         <p>${description}</p>`;
     about.appendChild(container);
 }
