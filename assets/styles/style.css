@@ -4,6 +4,25 @@
     margin: 0;
     padding: 0;
 }
+
+:root {
+    --cor-primaria:#EEEEEE;
+    --cor-secundaria:#261C2C ;
+}
+
+body{
+    background-color:var(--cor-primaria);
+    color:var(--cor-secundaria) ;
+}
+
+nav{
+    background-color:var(--cor-secundaria);
+    color:var(--cor-primaria);
+    position: fixed;
+    width: 100%;
+    top:0;
+}
+
 h1{
     font-size: 1.6rem;
     margin-top: 1vh;
@@ -12,6 +31,7 @@ h1{
     margin-left: 2vh;
     margin-right: 2vh;
 }
+
 h2{
     font-size: 1.5rem;
     margin-top: 1vh;
@@ -20,6 +40,7 @@ h2{
     margin-left: 2vh;
     margin-right: 2vh;
 }
+
 h3{
     font-size: 1.4rem;
     margin-top: 1vh;
@@ -28,6 +49,7 @@ h3{
     margin-left: 2vh;
     margin-right: 2vh;
 }
+
 h4 {
     font-size: 1.3rem;
     margin-top: 1vh;
@@ -36,6 +58,7 @@ h4 {
     margin-left: 2vh;
     margin-right: 2vh;
 }
+
 p{
     font-size: 1.2rem;
     margin-top: 1vh;
@@ -45,24 +68,40 @@ p{
     margin-right: 2vh;
 }
 
-/* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    body{
-        background-color: brown;
+    nav{
+        height: 10vh;
     }
-
+    #check-menu, .menu-hamburguer{
+        height: 8vh;
+        width: 8vh;
+        position: fixed;
+        left:2vw;
+        top:1vh;
+    }
+    #check-menu{
+        z-index: 2;
+        opacity: 0;
+    }
+    .menu-hamburguer{
+        z-index: 1;
+    
+    }
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 601px) {
-    body{
-        background-color: yellow;
+    #check-menu, .menu-hamburguer{
+        visibility: hidden;
+        height: 0;
+        width: 0;
     }
-
+    
 }
 
 @media only screen and (min-width: 992px) {
-    body{
-        background-color: blue;
+    #check-menu, .menu-hamburguer{
+        visibility: hidden;
+        height: 0;
+        width: 0;
     }
 }
