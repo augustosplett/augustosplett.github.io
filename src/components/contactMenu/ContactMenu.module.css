@@ -1,0 +1,8 @@
+.list{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+.item{
+    padding: 2vw;
+}

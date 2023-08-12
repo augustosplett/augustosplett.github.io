@@ -4,6 +4,7 @@ import styles from '@/styles/Home.module.css'
 import Navbar from '@/components/navbar/Navbar'
 import Section from '@/components/section/Section'
 import Title from '@/components/title/Title'
+import ContactMenu from '@/components/contactMenu/ContactMenu'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -20,8 +21,6 @@ export default function Home() {
           <Title>
             .about
           </Title>
-
-          
           <p>
             Hello there! I&apos;m thrilled to share my journey with you. Over the past six dynamic years in the technology industry, I&apos;ve gained valuable experience that showcases my adaptability and eagerness to learn. I&apos;ve had the opportunity to explore diverse sectors like finance, services, and outsourcing companies, allowing me to seamlessly embrace new challenges and technologies.
           </p>
@@ -45,8 +44,9 @@ export default function Home() {
             .contact
           </Title>
           <p>
-            Under Construction
+            Please reach me on:
           </p>
+          <ContactMenu />
         </Section>
 
       </main>
