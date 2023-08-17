@@ -2,4 +2,10 @@
     background-color: #000;
     height: 10vh;
     width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: fixed;
+    top:0;
 }
