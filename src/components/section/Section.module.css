@@ -6,3 +6,14 @@
     width: 60vw;
     padding: 5vh;
 }
+
+@media only screen and (max-width: 768px) {
+    .section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 85vw;
+        padding: 2vh;
+    }
+}
