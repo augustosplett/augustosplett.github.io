@@ -8,7 +8,10 @@ export default function Portfolio(){
           <Title>
             .portfolio
           </Title>
-          <PolaroidPhoto/>
+          <PolaroidPhoto
+            path = "https://image.ibb.co/b8UJBc/administration_architecture_big_ben_221166.jpg"
+            caption= "London Phone"
+          />
         </Section>
     )
 }
