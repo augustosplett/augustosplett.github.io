@@ -26,3 +26,10 @@
   transform: scale(1, 1) rotate(0deg) !important;
   transition: all 0.35s;
 }
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (max-width: 767px) {
+  .item {
+    width: 90%;
+  }
+}
