@@ -9,8 +9,9 @@ export default function Portfolio(){
             .portfolio
           </Title>
           <PolaroidPhoto
-            path = "https://image.ibb.co/b8UJBc/administration_architecture_big_ben_221166.jpg"
-            caption= "London Phone"
+            path = "/img/memory-game.png"
+            caption= "Memory Game"
+            link = 'https://augustosplett.github.io/jogo-da-memoria/'
           />
         </Section>
     )
