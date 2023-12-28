@@ -1,5 +1,6 @@
 import Title from '../title/Title'
 import Section from '../section/Section'
+import PolaroidPhoto from '../polaroidPhoto/PolaroidPhoto'
 
 export default function Portfolio(){
     return(
@@ -7,9 +8,7 @@ export default function Portfolio(){
           <Title>
             .portfolio
           </Title>
-          <p>
-            Under Construction
-          </p>
+          <PolaroidPhoto/>
         </Section>
     )
 }
