@@ -26,11 +26,13 @@ export default function Home() {
             <Image 
               className="image-desktop"
               style={{maxWidth: "30vw"}}
-              src="./img/profile.jpg"
-              alt="Album" />
+              src="/img/profile.jpg"
+              alt="Profile"
+              width={1000} 
+              height={1000}/>
           </figure>
           <div className="card-body">
-            <h2 className="card-title">About</h2>
+            <h2 className="card-title">Who Am I?</h2>
             <p>My name is <strong>Augusto</strong> and I&apos;m a brazilian fullstack developer living in Montreal.</p>
             <p>I&apos;ve been working in IT industry since 2018 and I belive that technology should be used to solve problems.</p>
             <p> I have knowledge in Project and Product management, business analysis, software specification, problem solving and data analysis.</p>
