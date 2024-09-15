@@ -1,5 +1,6 @@
 import MainLayout from '@/components/layouts/MainLayout'
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 export default function Home() {
   const [isLargeViewport, setIsLargeViewport] = useState(false);
@@ -22,7 +23,7 @@ export default function Home() {
 
         <div className="card lg:card-side bg-base-100 shadow-xl" style={{maxWidth: isLargeViewport ? "50vw" : "100vw"}}>
           <figure style={{display: isLargeViewport ? "block" : "none"}}>
-            <img
+            <Image 
               className="image-desktop"
               style={{maxWidth: "30vw"}}
               src="./img/profile.jpg"
@@ -30,8 +31,8 @@ export default function Home() {
           </figure>
           <div className="card-body">
             <h2 className="card-title">About</h2>
-            <p>My name is <strong>Augusto</strong> and I'm a brazilian fullstack developer living in Montreal.</p>
-            <p>I've been working in IT industry since 2018 and I belive that technology should be used to solve problems.</p>
+            <p>My name is <strong>Augusto</strong> and I&apos;m a brazilian fullstack developer living in Montreal.</p>
+            <p>I&apos;ve been working in IT industry since 2018 and I belive that technology should be used to solve problems.</p>
             <p> I have knowledge in Project and Product management, business analysis, software specification, problem solving and data analysis.</p>
             <div className="card-actions justify-end">
               <button className="btn btn-block">Take A Look At My Portfolio</button>
