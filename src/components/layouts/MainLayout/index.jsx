@@ -10,7 +10,6 @@ export default function MainLayout({ children, pageName }) {
   return (
     <>
       <Head>
-        {/* O título deve ser apenas uma string simples */}
         <title>{`Augusto Splett - ${pageName}`}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
