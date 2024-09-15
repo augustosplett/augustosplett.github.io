@@ -1,12 +1,14 @@
 import MainLayout from '@/components/layouts/MainLayout'
 
 export default function Skills() {
+  const page = "Portfolio";
+
   return (
     <>
       <MainLayout
-        pageName={"Skills"}
+        pageName={page}
       >
-        <h1>{{pageName}}</h1>
+        <h1>{page}</h1>
       </MainLayout>
     </>
   )
