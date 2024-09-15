@@ -6,7 +6,7 @@ export default function Skills() {
       <MainLayout
         pageName={"Skills"}
       >
-        <h1>Home</h1>
+        <h1>{{pageName}}</h1>
       </MainLayout>
     </>
   )

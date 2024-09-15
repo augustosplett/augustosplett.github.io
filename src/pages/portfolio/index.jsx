@@ -6,7 +6,7 @@ export default function Portfolio() {
       <MainLayout
         pageName={"Portfolio"}
       >
-        <h1>Home</h1>
+        <h1>{{pageName}}</h1>
       </MainLayout>
     </>
   )
