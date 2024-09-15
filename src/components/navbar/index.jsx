@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import RoutesMenu from '../routesMenu';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -46,21 +47,18 @@ export default function Navbar() {
             </label>
           </div>
           {isOpen && (
-            <ul
+            <RoutesMenu
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-              <li><a>Item 1</a></li>
-              <li><a>Item 3</a></li>
-            </ul>
+              cssClasses="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow" 
+            />
           )}
         </div>
         <h1 className='text-xl'>Augusto.Splett</h1>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          <li><a>Item 1</a></li>
-          <li><a>Item 3</a></li>
-        </ul>
+        <RoutesMenu 
+          cssClasses="menu menu-horizontal px-1"
+        />
       </div>
     </div>
   );
