@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import RoutesMenu from '../routesMenu';
+import CurlyBracketsLeft from '@/assets/curly-brackets-left.svg';
+import CurlyBracketsRight from '@/assets/curly-brackets-right.svg';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -53,7 +55,9 @@ export default function Navbar() {
             />
           )}
         </div>
-        <strong><h1 className='text-xl' style={{fontSize: '2rem'}}>Augusto.Splett</h1></strong>
+        <CurlyBracketsLeft className="fill-current" width={50} height={50}/>
+          <strong><h1 className='text-xl' style={{fontSize: '2rem'}}>Augusto.Splett</h1></strong>
+        <CurlyBracketsRight className="fill-current" width={50} height={50}/>
       </div>
       <div className="navbar-center hidden lg:flex">
         <RoutesMenu 
