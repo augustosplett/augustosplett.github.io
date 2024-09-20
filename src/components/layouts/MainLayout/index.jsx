@@ -15,7 +15,7 @@ export default function MainLayout({ children, pageName }) {
       </Head>
       <div style={{ display: 'flex', flexDirection: 'column',  minHeight: '100vh' }}>
         <Navbar />
-        <main className={`${styles.main} ${inter.className}`} style={{ flex: 1, padding: '1rem', alignItems: 'center', justifyContent: 'space-around' }}>
+        <main className={`${styles.main} ${inter.className}`} style={{ flex: 1, padding: '1rem', alignItems: 'center', justifyContent: 'flex-start' }}>
           {children}
         </main>
         <Footer />

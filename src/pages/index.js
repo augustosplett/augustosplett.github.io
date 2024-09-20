@@ -20,12 +20,12 @@ export default function Home() {
     <>
       <MainLayout pageName={"Home"}>
         <h1 style={{fontSize: "2rem"}}>👋 Hi there! </h1>
-
+        <br/>
         <div className="card lg:card-side bg-base-100 shadow-xl" style={{maxWidth: isLargeViewport ? "50vw" : "100vw"}}>
           <figure style={{display: isLargeViewport ? "block" : "none"}}>
             <Image 
               className="image-desktop"
-              style={{maxWidth: "30vw"}}
+              style={{maxWidth: "40vw"}}
               src="/img/profile.jpg"
               alt="Profile"
               width={1000} 

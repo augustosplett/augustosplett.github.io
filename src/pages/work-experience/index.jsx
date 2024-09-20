@@ -22,7 +22,8 @@ export default function WorkExperience() {
       <MainLayout
         pageName={"Work Experience"}
       >
-        
+        <h1 style={{fontSize: "2rem"}}>🧑‍💼 Work Experience </h1>
+        <br/>
         <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical" style={{maxWidth: isLargeViewport ? "50vw" : "100vw"}}>
           <li>
             <div className="timeline-middle">

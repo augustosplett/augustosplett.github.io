@@ -7,6 +7,7 @@ export default function Education() {
         pageName={"Education"}
       >
         <h1 style={{fontSize: "2rem"}}>👨‍🎓 My Education </h1>
+        <br/>
         <ul className="timeline timeline-vertical">
         <li>
           <div className="timeline-start">2023 - 2024</div>

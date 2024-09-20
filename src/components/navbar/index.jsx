@@ -53,7 +53,7 @@ export default function Navbar() {
             />
           )}
         </div>
-        <h1 className='text-xl'>Augusto.Splett</h1>
+        <strong><h1 className='text-xl' style={{fontSize: '2rem'}}>Augusto.Splett</h1></strong>
       </div>
       <div className="navbar-center hidden lg:flex">
         <RoutesMenu 
