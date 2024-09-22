@@ -1,6 +1,7 @@
 import MainLayout from '@/components/layouts/MainLayout'
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
   const [isLargeViewport, setIsLargeViewport] = useState(false);
@@ -16,7 +17,7 @@ export default function Home() {
 
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-  
+
   return (
     <>
       <MainLayout pageName={"Home"}>
@@ -38,7 +39,7 @@ export default function Home() {
             <p>I&apos;ve been working in IT industry since 2018 and I belive that technology should be used to solve problems.</p>
             <p> I have knowledge in Project and Product management, business analysis, software specification, problem solving and data analysis.</p>
             <div className="card-actions justify-end">
-              <button className="btn btn-block">Take A Look At My Portfolio</button>
+              <Link className="btn btn-block" href="/portfolio">Take A Look At My Portfolio</Link>
             </div>
           </div>
         </div>
