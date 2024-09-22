@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@octokit/rest": "^21.0.2",
     "@svgr/webpack": "^8.1.0",
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.13",
