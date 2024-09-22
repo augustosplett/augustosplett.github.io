@@ -1,13 +1,30 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
-export default function RoutesMenu({ selected, cssClasses }){
-    return(
+export default function RoutesMenu({ cssClasses }) {
+  const router = useRouter();
 
-        <ul className={cssClasses}>
-            <li><Link href="/">Home</Link></li>
-            <li><Link href="/education">Education</Link></li>
-            <li><Link href="/work-experience">Work Experience</Link></li>
-            <li><Link href="/portfolio">Portfolio</Link></li>
-        </ul>
-    )
+  const menuItems = [
+    { name: 'Home', path: '/' },
+    { name: 'Education', path: '/education' },
+    { name: 'Work Experience', path: '/work-experience' },
+    { name: 'Portfolio', path: '/portfolio' },
+  ];
+
+  return (
+    <ul className={cssClasses}>
+      {menuItems.map((item) => (
+        <li key={item.path}>
+          <Link
+            href={item.path}
+            className={`text-lg ${
+              router.pathname === item.path ? 'text-neutral bg-gray-200' : ''
+            }`}
+          >
+            {item.name}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  );
 }

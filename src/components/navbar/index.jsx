@@ -5,6 +5,7 @@ import CurlyBracketsRight from '@/assets/curly-brackets-right.svg';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [activePage, setActivePage] = useState('/');
   const dropdownRef = useRef(null);
 
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -27,7 +28,7 @@ export default function Navbar() {
       <div className="navbar-start">
         <div className="dropdown" ref={dropdownRef}>
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-            <label className="btn btn-circle swap swap-rotate">
+            <label className="btn btn-circle swap swap-rotate bg-neutral text-neutral-content border-0 focus:outline-none">
               <input type="checkbox" checked={isOpen} onClick={toggleMenu} readOnly />
               <svg
                 className="swap-off fill-current"
@@ -51,7 +52,9 @@ export default function Navbar() {
           {isOpen && (
             <RoutesMenu
               tabIndex={0}
-              cssClasses="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow" 
+              cssClasses="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              activePage={activePage}
+              setActivePage={setActivePage} 
             />
           )}
         </div>
@@ -62,6 +65,8 @@ export default function Navbar() {
       <div className="navbar-center hidden lg:flex">
         <RoutesMenu 
           cssClasses="menu menu-horizontal px-1"
+          activePage={activePage}
+          setActivePage={setActivePage}
         />
       </div>
     </div>
