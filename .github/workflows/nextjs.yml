@@ -53,6 +53,9 @@ jobs:
         with:
           node-version: "16"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
+      - name: Set GITHUB_ACCESS_TOKEN secret
+        run: echo "GITHUB_ACCESS_TOKEN=${{ secrets.AUGUSTO_GITHUB_ACCESS_TOKEN }}" >> $GITHUB_ENV
+
       - name: Setup Pages
         uses: actions/configure-pages@v3
         with:
@@ -93,3 +96,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
+        env:
+          GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_ACCESS_TOKEN }}
