@@ -8,9 +8,24 @@
     margin-top: 2vh;
 }
 
+.cardsMobile{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:center;
+    margin-top: 2vh;
+}
+
 .cardsContainer{
     width: 85%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+
+.categoryTitles{
+    font-size: 1.5rem;
+    font-weight: bold;
 }

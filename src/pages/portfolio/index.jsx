@@ -1,9 +1,25 @@
 import MainLayout from '@/components/layouts/MainLayout';
 import styles from './Portfolio.module.css';
 import Card from '@/components/card';
+import { useEffect, useState } from 'react';
 
 export default function Portfolio() {
   const page = "Portfolio";
+
+  const [isLargeViewport, setIsLargeViewport] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsLargeViewport(window.innerWidth > 720);
+    };
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <>
       <MainLayout
@@ -11,8 +27,8 @@ export default function Portfolio() {
       >
         <h1 style={{fontSize: "2rem"}}>🤓 My Portfolio </h1>
         <br/>
-        <div className={styles.cardsDesktop}>
-          <h2 style={{fontSize: "1.5rem" , width: "10%"}}>WebApps</h2>
+        <div className={isLargeViewport? styles.cardsContainer : styles.cardsMobile}>
+          <h2 className={styles.categoryTitles}>WebApps</h2>
           <div className={styles.cardsContainer}>
             <Card
               title="To Do App"
@@ -22,8 +38,8 @@ export default function Portfolio() {
           </div>
         </div>
         
-        <div className={styles.cardsDesktop}>
-          <h2 style={{fontSize: "1.5rem", width: "10%"}}>Games</h2>
+        <div className={isLargeViewport? styles.cardsContainer : styles.cardsMobile}>
+          <h2 className={styles.categoryTitles}>Games</h2>
           <div className={styles.cardsContainer}>
             <Card
               title="Breakout Game"

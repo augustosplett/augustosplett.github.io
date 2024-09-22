@@ -2,7 +2,7 @@ import React from "react";
 
 const Card = ({ title, description, imgHref }) => {
   return (
-    <div className="card bg-base-100 w-80 shadow-xl">
+    <div className="card bg-base-100 w-80 shadow-xl mb-4" >
       <figure>
         <img
           src={imgHref}

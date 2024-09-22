@@ -16,6 +16,7 @@ export default function Home() {
 
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+  
   return (
     <>
       <MainLayout pageName={"Home"}>
