@@ -15,15 +15,24 @@ export default function Portfolio() {
     const handleResize = () => {
       setIsLargeViewport(window.innerWidth > 720);
     };
+
     const fetchUserData = async () => {
       try {
-        const response = await fetch('/api/git-stats');
+        const response = await fetch('https://api.github.com/users/augustosplett');
+        
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
-        const data = await response.json();
-        //console.log(data);
-        setUserData(data);
+
+        const info = await response.json();
+        setUserData({
+          userName: info.login,
+          avatar_url: info.avatar_url,
+          name: info.name,
+          location: info.location,
+          bio: info.bio,
+          public_repos: info.public_repos,
+        });
       } catch (err) {
         setError(err.message);
         console.error('Error fetching user data:', err);
@@ -31,6 +40,7 @@ export default function Portfolio() {
     };
 
     fetchUserData();
+
     handleResize();
 
     window.addEventListener('resize', handleResize);
@@ -43,25 +53,22 @@ export default function Portfolio() {
 
   return (
     <>
-      <MainLayout
-        pageName={page}
-      >
-
-        <div className={isLargeViewport? styles.cardsContainer : styles.cardsMobile}>
+      <MainLayout pageName={page}>
+        <div className={isLargeViewport ? styles.cardsContainer : styles.cardsMobile}>
           <GitHubUserInfo user={userData} isLargeViewport={isLargeViewport} />
         </div>
         <br />
-        <h1 style={{fontSize: "2rem"}}>🤓 My Portfolio </h1>
+        <h1 style={{ fontSize: "2rem" }}>🤓 My Portfolio </h1>
         <hr style={{
-          border: 'none',        // Removes default border
-          height: '2px',        // Height of the line
-          backgroundColor: '#ccc', // Color of the line
-          width: '100%',        // Width of the line (can be set to a specific value)
-          margin: '20px 0'     // Vertical spacing around the line
+          border: 'none',
+          height: '2px',
+          backgroundColor: '#ccc',
+          width: '100%',
+          margin: '20px 0'
         }} />
         
         <br/>
-        <div className={isLargeViewport? styles.cardsContainer : styles.cardsMobile}>
+        <div className={isLargeViewport ? styles.cardsContainer : styles.cardsMobile}>
           <h2 className={styles.categoryTitles}>WebApps</h2>
           <div className={styles.cardsContainer}>
             <Card
@@ -72,7 +79,7 @@ export default function Portfolio() {
           </div>
         </div>
         
-        <div className={isLargeViewport? styles.cardsContainer : styles.cardsMobile}>
+        <div className={isLargeViewport ? styles.cardsContainer : styles.cardsMobile}>
           <h2 className={styles.categoryTitles}>Games</h2>
           <div className={styles.cardsContainer}>
             <Card
@@ -80,13 +87,11 @@ export default function Portfolio() {
               description="A simpler version of the classic atari game Breakout!"
               imgHref="/img/breakout_2.gif"
             />
-
             <Card
               title="Memory Game"
               description="A web version of a classic of the classics memory game."
               imgHref="/img/memory-game.png"
             />
-
             <Card
               title="Flappy Bird"
               description="My version of Flappy bird developed with Unity."
@@ -96,5 +101,5 @@ export default function Portfolio() {
         </div>
       </MainLayout>
     </>
-  )
+  );
 }
