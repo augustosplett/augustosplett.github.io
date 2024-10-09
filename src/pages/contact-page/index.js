@@ -1,5 +1,6 @@
 // pages/contact.js
-import ContactForm from '@/components/ContactForm';
+
+import ContactForm from '@/components/contactForm';
 import MainLayout from '@/components/layouts/MainLayout'
 
 const ContactPage = () => {
