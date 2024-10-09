@@ -8,10 +8,9 @@ const ContactPage = () => {
     <MainLayout
     pageName={"Education"}
     > 
-        <div>
-        <h1>Fale Conosco</h1>
+    <h1 style={{ fontSize: "2rem" }}>🤳 Send Me A Message </h1>
         <ContactForm />
-        </div>
+
     </MainLayout>
 
   );

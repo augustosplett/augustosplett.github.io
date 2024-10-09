@@ -1,4 +1,3 @@
-// components/ContactForm.js
 import { useState } from 'react';
 import { db } from '../../config/firebaseConfig'; 
 import { collection, addDoc } from "firebase/firestore"; 
@@ -22,39 +21,62 @@ const ContactForm = () => {
         ...formData,
         timestamp: new Date()
       });
-      alert('Mensagem enviada com sucesso!');
+      alert('Message sent successfully!');
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {
-      console.error("Erro ao enviar mensagem: ", error);
+      console.error("Error sending message: ", error);
+      alert('Failed to send message. Please try again.');
     }
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        name="name"
-        placeholder="Nome"
-        value={formData.name}
-        onChange={handleChange}
-        required
-      />
-      <input
-        type="email"
-        name="email"
-        placeholder="Email"
-        value={formData.email}
-        onChange={handleChange}
-        required
-      />
-      <textarea
-        name="message"
-        placeholder="Mensagem"
-        value={formData.message}
-        onChange={handleChange}
-        required
-      ></textarea>
-      <button type="submit">Enviar</button>
+    <form onSubmit={handleSubmit} className="space-y-4 max-w-xl mx-auto p-4 shadow-lg rounded-lg bg-base-100">
+      <div className="form-control">
+        <label className="label">
+          <span className="label-text">Name</span>
+        </label>
+        <input
+          type="text"
+          name="name"
+          placeholder="Your name"
+          value={formData.name}
+          onChange={handleChange}
+          required
+          className="input input-bordered"
+        />
+      </div>
+      <div className="form-control">
+        <label className="label">
+          <span className="label-text">Email</span>
+        </label>
+        <input
+          type="email"
+          name="email"
+          placeholder="Your email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+          className="input input-bordered"
+        />
+      </div>
+      <div className="form-control">
+        <label className="label">
+          <span className="label-text">Message</span>
+        </label>
+        <textarea
+          name="message"
+          placeholder="Your message"
+          value={formData.message}
+          onChange={handleChange}
+          required
+          className="textarea textarea-bordered"
+        ></textarea>
+      </div>
+      <div className="form-control mt-4">
+        <button type="submit" className="btn btn-primary w-full">
+          Send Message
+        </button>
+      </div>
     </form>
   );
 };
