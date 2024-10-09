@@ -3,6 +3,8 @@ import CurlyBracketsRight from '@/assets/curly-brackets-right.svg';
 import LinkedinLogo from '@/assets/linkedin.svg';
 import GithubLogo from "@/assets/github.svg";
 import EmailLogo from '@/assets/envelope-solid.svg';
+import MessageImg from '@/assets/message.svg';
+import Link from 'next/link';
 
 export default function Footer(){
     return(
@@ -30,6 +32,10 @@ export default function Footer(){
             <a href="mailto:augusto.splett@gmail.com">
               <EmailLogo className="fill-current" width={30} height={30}/>
             </a>
+
+            <Link href="/contact-page">
+              <MessageImg className="fill-current" width={30} height={30}/>
+            </Link>
           </div>
         </nav>
       </footer>
