@@ -2,17 +2,35 @@ import MainLayout from '@/components/layouts/MainLayout';
 import styles from './Portfolio.module.css';
 import Card from '@/components/card';
 import { useEffect, useState } from 'react';
+import GitHubUserInfo from '@/components/githubUserInfo';
 
 export default function Portfolio() {
   const page = "Portfolio";
 
   const [isLargeViewport, setIsLargeViewport] = useState(false);
+  const [error, setError] = useState();
+  const [userData, setUserData] = useState(null);
 
   useEffect(() => {
     const handleResize = () => {
       setIsLargeViewport(window.innerWidth > 720);
     };
+    const fetchUserData = async () => {
+      try {
+        const response = await fetch('/api/git-stats');
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        //console.log(data);
+        setUserData(data);
+      } catch (err) {
+        setError(err.message);
+        console.error('Error fetching user data:', err);
+      }
+    };
 
+    fetchUserData();
     handleResize();
 
     window.addEventListener('resize', handleResize);
@@ -20,12 +38,28 @@ export default function Portfolio() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  if (error) return <div>Error: {error}</div>;
+  if (!userData) return <div>Loading...</div>;
+
   return (
     <>
       <MainLayout
         pageName={page}
       >
+
+        <div className={isLargeViewport? styles.cardsContainer : styles.cardsMobile}>
+          <GitHubUserInfo user={userData} isLargeViewport={isLargeViewport} />
+        </div>
+        <br />
         <h1 style={{fontSize: "2rem"}}>🤓 My Portfolio </h1>
+        <hr style={{
+          border: 'none',        // Removes default border
+          height: '2px',        // Height of the line
+          backgroundColor: '#ccc', // Color of the line
+          width: '100%',        // Width of the line (can be set to a specific value)
+          margin: '20px 0'     // Vertical spacing around the line
+        }} />
+        
         <br/>
         <div className={isLargeViewport? styles.cardsContainer : styles.cardsMobile}>
           <h2 className={styles.categoryTitles}>WebApps</h2>

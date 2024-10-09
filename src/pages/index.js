@@ -3,14 +3,17 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+
 export default function Home() {
   const [isLargeViewport, setIsLargeViewport] = useState(false);
 
-  useEffect(() => {
+
+  useEffect( () => {
     const handleResize = () => {
       setIsLargeViewport(window.innerWidth > 720);
     };
 
+    
     handleResize();
 
     window.addEventListener('resize', handleResize);
@@ -43,6 +46,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+ 
       </MainLayout>
     </>
   )
